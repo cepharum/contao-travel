@@ -1,1 +1,0 @@
-On installation this folder gets symlinked under web/bundles and thus is visible to the public.
