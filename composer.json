@@ -26,7 +26,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Cepharum\\Contao\\Travel": "src/"
+			"Cepharum\\Contao\\Travel\\": "src/"
 		},
 		"classmap": [
 			"src/Resources/contao/"
