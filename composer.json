@@ -1,0 +1,60 @@
+{
+	"name": "cepharum/contao-travel",
+	"description": "Contao 4.x bundle extending pages to contain meta information used with a website listing travels",
+	"keywords": [ "contao", "bundle" ],
+	"type": "contao-bundle",
+	"homepage": "https://cepharum.de",
+	"license": "MIT",
+	"authors": [{
+			"name": "Thomas Urban",
+			"homepage": "https://cepharum.de",
+			"role": "Developer"
+	}],
+	"support": {
+		"source": "https://github.com/cepharum/contao-travel",
+		"issues": "https://github.com/cepharum/contao-travel/issues"
+	},
+	"require": {
+		"php":">=7.0",
+		"contao/core-bundle":"~4.4"
+	},
+	"require-dev": {
+		"contao/manager-plugin": "^2.0"
+	},
+	"conflict": {
+		"contao/manager-plugin": "<2.0 || >=3.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Cepharum\\Contao\\Travel": "src/"
+		},
+		"classmap": [
+			"src/Resources/contao/"
+		],
+		"exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Cepharum\\Contao\\": "tests/"
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-develop": "1.0.x-dev"
+		},
+		"contao": {
+			"transifex": {
+				"project": "contao-travel",
+				"prefix": "master-",
+				"languages_cto": "src/Resources/contao/languages",
+				"languages_tx": ".tx"
+			}
+		},
+		"contao-manager-plugin": "Cepharum\\Contao\\Travel\\ContaoManager\\Plugin"
+	}
+}
