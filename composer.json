@@ -45,9 +45,6 @@
 		}
 	},
 	"extra": {
-		"branch-alias": {
-			"dev-develop": "1.0.x-dev"
-		},
 		"contao": {
 			"transifex": {
 				"project": "contao-travel",
