@@ -1,0 +1,9 @@
+services:
+    app.article_tags_manager:
+        class: Codefog\TagsBundle\Manager\DefaultManager
+        arguments:
+            - "@contao.framework"
+            - "tl_page"
+            - "tags"
+        tags:
+            - { name: codefog_tags.manager, alias: app.page }
