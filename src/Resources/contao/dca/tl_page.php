@@ -1,37 +1,47 @@
 <?php
 
-namespace Cepharum\Contao\Travel;
+$DCA = &$GLOBALS['TL_DCA']['tl_page'];
 
-$GLOBALS['TL_DCA']['tl_page']['fields']['lon'] = [
-	'label' => &$GLOBALS['TL_LANG']['tl_page']['lon'],
-	'exclude' => false,
-	'search' => false,
+// inject palette of fields
+foreach ( $DCA['palettes'] as $name => $palette ) {
+	if ( $name != '__selector__' ) {
+		$DCA['palettes'][$name] = str_replace( '{meta_legend}', '{position_legend:hide},lon,lat;{meta_legend}', $palette );
+	}
+}
+
+// define injected fields
+$DCA['fields']['lon'] = [
+	'label'     => &$GLOBALS['TL_LANG']['tl_page']['lon'],
+	'exclude'   => false,
+	'search'    => false,
 	'inputType' => 'text',
-	'eval' => [
+	'eval'      => [
 		'maxval' => -180,
 		'minval' => -180,
-		'rgxp' => 'digit',
+		'rgxp'   => 'digit',
 	],
-	'sql' => [
-		'type' => 'string',
-		'length' => '12',
+	'sql'       => [
+		'type'    => 'string',
+		'length'  => '12',
 		'default' => null,
 	],
 ];
 
-$GLOBALS['TL_DCA']['tl_page']['fields']['lat'] = [
-	'label' => &$GLOBALS['TL_LANG']['tl_page']['lat'],
-	'exclude' => false,
-	'search' => false,
+$DCA['fields']['lat'] = [
+	'label'     => &$GLOBALS['TL_LANG']['tl_page']['lat'],
+	'exclude'   => false,
+	'search'    => false,
 	'inputType' => 'text',
-	'eval' => [
+	'eval'      => [
 		'maxval' => -180,
 		'minval' => -180,
-		'rgxp' => 'digit',
+		'rgxp'   => 'digit',
 	],
-	'sql' => [
-		'type' => 'string',
-		'length' => '12',
+	'sql'       => [
+		'type'    => 'string',
+		'length'  => '12',
 		'default' => null,
 	],
 ];
+
+unset( $DCA );
