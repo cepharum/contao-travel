@@ -34,4 +34,8 @@ namespace Cepharum\Contao\Travel;
  * @package Cepharum\Contao\Travel
  */
 class Bundle extends \Symfony\Component\HttpKernel\Bundle\Bundle {
+	public function getContainerExtension()
+	{
+		return new DependencyInjection\Extension();
+	}
 }
