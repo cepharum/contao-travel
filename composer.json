@@ -2,22 +2,28 @@
 	"name": "cepharum/contao-travel",
 	"description": "Contao 4.x bundle extending pages to contain meta information used with a website listing travels",
 	"version": "0.0.2",
-	"keywords": [ "contao", "bundle" ],
+	"keywords": [
+		"contao",
+		"bundle"
+	],
 	"type": "contao-bundle",
 	"homepage": "https://cepharum.de",
 	"license": "MIT",
-	"authors": [{
+	"authors": [
+		{
 			"name": "Thomas Urban",
 			"homepage": "https://cepharum.de",
 			"role": "Developer"
-	}],
+		}
+	],
 	"support": {
 		"source": "https://github.com/cepharum/contao-travel",
 		"issues": "https://github.com/cepharum/contao-travel/issues"
 	},
 	"require": {
-		"php":">=7.0",
-		"contao/core-bundle":"~4.4"
+		"php": ">=7.1",
+		"contao/core-bundle": "~4.4",
+		"codefog/tags-bundle": "2.1.x"
 	},
 	"require-dev": {
 		"contao/manager-plugin": "^2.0"
@@ -33,10 +39,10 @@
 			"src/Resources/contao/"
 		],
 		"exclude-from-classmap": [
-            "src/Resources/contao/config/",
-            "src/Resources/contao/dca/",
-            "src/Resources/contao/languages/",
-            "src/Resources/contao/templates/"
+			"src/Resources/contao/config/",
+			"src/Resources/contao/dca/",
+			"src/Resources/contao/languages/",
+			"src/Resources/contao/templates/"
 		]
 	},
 	"autoload-dev": {
