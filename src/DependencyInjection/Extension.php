@@ -26,7 +26,7 @@ SOFTWARE.
 
  */
 
-namespace Cepharum\Contao\Travel;
+namespace Cepharum\Contao\Travel\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
