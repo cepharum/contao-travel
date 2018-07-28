@@ -19,11 +19,12 @@ $DCA['fields']['lon'] = [
 		'maxval' => -180,
 		'minval' => -180,
 		'rgxp'   => 'digit',
+		'tl_class' => 'w50',
 	],
 	'sql'       => [
 		'type'    => 'string',
 		'length'  => '12',
-		'default' => null,
+		'default' => '',
 	],
 ];
 
@@ -36,11 +37,12 @@ $DCA['fields']['lat'] = [
 		'maxval' => -180,
 		'minval' => -180,
 		'rgxp'   => 'digit',
+		'tl_class' => 'w50',
 	],
 	'sql'       => [
 		'type'    => 'string',
 		'length'  => '12',
-		'default' => null,
+		'default' => '',
 	],
 ];
 
