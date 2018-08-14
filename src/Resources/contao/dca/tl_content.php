@@ -22,7 +22,7 @@ $DCA['fields']['area'] = [
 	],
 	'sql'       => [
 		'type'    => 'string',
-		'length'  => '12',
+		'length'  => '32',
 		'default' => '',
 	],
 ];
