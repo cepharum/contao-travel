@@ -1,7 +1,7 @@
 {
 	"name": "cepharum/contao-travel",
 	"description": "Contao 4.x bundle extending pages to contain meta information used with a website listing travels",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"keywords": [
 		"contao",
 		"bundle"
